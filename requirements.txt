@@ -1,0 +1,4 @@
+# PyTorch
+torch>=0.4.1
+# bert
+pytorch-pretrained-bert>=0.6.2
