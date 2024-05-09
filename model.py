@@ -20,8 +20,9 @@ class ShallowBKGC:
         tail_embedding_e = embedding_layer(input_tail)
         tail_embedding_drop = Dropout(self.settings['input_dropout'])(tail_embedding_e)
 
-        #embedding_weights = np.load('FB15K237EntTxtWeights.npy', allow_pickle=True)
-        embedding_weights = np.load('WN18RREntTxtWeights.npy', allow_pickle=True)
+        embedding_weights = np.load('FB15K237EntTxtWeights.npy', allow_pickle=True)
+        #embedding_weights = np.load('WN18RREntTxtWeights.npy', allow_pickle=True)
+        #embedding_weights = np.load('YAGOEntTxtWeights.npy', allow_pickle=True)
         embedding_weights_reshape = torch.stack(list(embedding_weights))
         embedding_weights = embedding_weights_reshape.numpy()
         embedding_weights_dim = embedding_weights[:, :self.settings['embedding_dim']]
